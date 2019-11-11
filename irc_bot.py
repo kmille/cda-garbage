@@ -57,12 +57,11 @@ def setup_irc():
 
 def start_irc_thread():
     print("DEBUG: Starting irc bot in background task")
-    t = Thread(target=setup_irc)
-    t.start()
+    Thread(target=setup_irc).start()
     while not irc_connection:
         print("DEBUG: Still not connected to irc. Waiting ...")
         time.sleep(2)
-    return t, irc_connection
+    return irc_connection
 
 
 if __name__ == '__main__':

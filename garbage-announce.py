@@ -10,7 +10,6 @@ from irc_bot import start_irc_thread
 from ipdb import set_trace
 
 irc_connection = None
-thread = None
 
 settings_file = os.environ.get("SETTINGS_FILE", "settings.yaml")
 settings = yaml.safe_load(open(settings_file))
@@ -35,5 +34,5 @@ def setup_schedule():
 
 
 if __name__ == '__main__':
-    irc_thread, irc_connection = start_irc_thread()
+    irc_connection = start_irc_thread()
     setup_schedule()
