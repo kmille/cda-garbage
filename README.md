@@ -16,12 +16,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 mv settings.yaml.template settings.yaml
 adjust settings.yaml
-python garbage-anounce.py
+python garbage-announce.py
 ```
 
 
 # Settings
-Check settings.yaml.template. Via daily_jobs you can specify when the emails
+Check settings.yaml.template. Via daily_jobs you can specify when the emails will be fetched.
 
 
 # Sample E-Mail
@@ -37,11 +37,12 @@ wir erinnern Sie an die Termine der Müllabfuhr.
 Diese Erinnerungsmail wurde am Donnerstag, 01.08.2019 - 06:00:01 versendet.
 Entsprechend der Auswahl in Ihrem Infomail Eintrag erfolgt der Versand mit
 Option 1: am Tag vor der Abfuhr (Standard).
+...
 ```
 
 # Register account on IRC
 1. go to https://webirc.hackint.org/
 2. use the username you want to use
 3. /msg NickServ REGISTER yourpassword yourmail@adomain.de
-4. You will get a mail with a command like this: /msg NickServ VERIFY REGISTER cda-garbage somesecret
+4. You will get a mail with a command like this: /msg NickServ VERIFY REGISTER <your usernarme> somesecret
 5. Now if someone uses your nick you can kick him with: /msg NickServer GHOST <your username> <yourrpassword>. Then /nick <your username> to switch.
