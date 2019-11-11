@@ -1,0 +1,19 @@
+irc:
+    server: irc.hackint.org
+    port: 6697
+    channel: "#kmille-bot-solutions"
+    nickname: cda-garbage
+    pass: onlyifneeded
+
+mail:
+    server: your-imap-server.com
+    user: username
+    pass: password
+    subject: "EAD Abfuhrtermin"
+    regex_abholung: '64283 Darmstadt - Innenstadt, Wilhelminenstraße 1-35, 2-10\r\n- (.*)'
+
+daily_jobs:
+    - "20:00"
+    - "21:37"
+
+msg: "Morgen holt die EAD den Müll ab ({}). Kannst du bitte die Tonne rausstellen?"
