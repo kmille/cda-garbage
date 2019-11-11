@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs the garbage collector notifier
+
+[Service]
+User=cda-garbage
+Group=cda-garbage
+Environment=SETTINGS_FILE=/home/cda-garbage/cda-garbage/settings.yaml
+WorkingDirectory=/home/cda-garbage/cda-garbage
+ExecStart=/home/cda-garbage/cda-garbage/venv/bin/python garbage-announce.py
+
+[Install]
+WantedBy=multi-user.target

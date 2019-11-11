@@ -46,3 +46,22 @@ Option 1: am Tag vor der Abfuhr (Standard).
 3. /msg NickServ REGISTER yourpassword yourmail@adomain.de
 4. You will get a mail with a command like this: /msg NickServ VERIFY REGISTER <your usernarme> somesecret
 5. Now if someone uses your nick you can kick him with: /msg NickServer GHOST <your username> <yourrpassword>. Then /nick <your username> to switch.
+
+
+# Run it on a server
+```bash
+
+adduser cda-garbage
+# deactivate password
+passwd -d cda-garbage
+
+chmod 600 settings.yaml
+chown -R cda-garbage: .
+
+mv garbage-announce.service /etc/systemd/system
+systemctl daemon-reload
+systemctl start garbage-announce.service
+# check if it runs
+journalctl -f -u garbage-announce.service
+systemctl enable garbage-announce.service
+```
