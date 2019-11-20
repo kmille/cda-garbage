@@ -40,7 +40,7 @@ def get_mails_from_ead():
     server.login(settings['mail']['user'], settings['mail']['pass'])
     server.select_folder('INBOX')
     # just check the last 5 mails (independent of (un)seen)
-    messages = server.search()[:5]
+    messages = server.search()[-5:]
     for __, message_data in server.fetch(messages, 'RFC822').items():
         body = get_body_of_mail(message_data)
         if body:
