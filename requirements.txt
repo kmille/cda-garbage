@@ -5,7 +5,7 @@ IMAPClient==2.1.0
 importlib-metadata==0.23
 inflect==3.0.2
 ipdb==0.12.2
-ipython==7.9.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 irc==17.1
 jaraco.classes==2.0
